@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Bold - Início</title>
+  <link rel="icon" type="image/png" href="../img/icon.png">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <img src="../img/logo.png" alt="Logo Big Bold">
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="carrinho.html">Carrinho</a>
+      <span id="contador-carrinho" class="contador">0</span>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h1>Bem-vindo ao Big Bold</h1>
+    <p class="paragrafo">Hambúrgueres incríveis, batatas crocantes e sobremesas irresistíveis. Sinta o sabor do universo!</p>
+    <a href="cardapio.html" class="botao">Ver Cardápio</a>
+  </section>
+
+  <section id="cardapio">
+    <h2>Destaques do Cardápio</h2>
+    <div class="menu">
+      <div class="item hamburgueres">
+        <img src="../img/creampie.png" alt="Hambúrguer" class="imagem-cardapio">
+        <h3>Big Sirius</h3>
+        <p>R$ 24,90</p>
+        <button class="btn-carrinho" data-item="Big Sirius" data-preco="24.90">Adicionar ao Carrinho</button>
+      </div>
+      <div class="item combos">
+        <img src="../img/batata-frita.png" alt="Batata" class="imagem-cardapio">
+        <h3>Batata Nebulosa</h3>
+        <p>R$ 11,90</p>
+        <button class="btn-carrinho" data-item="Batata Nebulosa" data-preco="11.90">Adicionar ao Carrinho</button>
+      </div>
+      <div class="item sobremesas">
+        <img src="../img/sundae.png" alt="Sobremesa" class="imagem-cardapio">
+        <h3>Galáxia Sundae</h3>
+        <p>R$ 9,90</p>
+        <button class="btn-carrinho" data-item="Galáxia Sundae" data-preco="9.90">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="duvidas">
+    <h2>Dúvidas Frequentes</h2>
+    <div class="duvida">
+      <h3>Vocês fazem entregas?</h3>
+      <p class="paragrafo">Sim! Entregamos pelo iFood, Uber Eats e 99Food .</p>
+    </div>
+    <div class="duvida">
+      <h3>Posso personalizar meu lanche?</h3>
+      <p class="paragrafo">Claro! Você pode escolher os ingredientes na hora do pedido.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <img src="../img/logo.png" alt="Logo Big Bold">
+      <p>Big Bold &copy; 2025</p>
+    </div>
+    <div>
+      <p class="titulo">Links úteis</p>
+      <a href="index.html">Início</a><br>
+      <a href="cardapio.html">Cardápio</a>
+    </div>
+    <div>
+      <p class="titulo">Contato</p>
+      <p>Email: contato@siriusburguer.com</p>
+      <p>Telefone: (00) 12345-6789</p>
+    </div>
+  </footer>
+
+  <div id="copyright">© 2025 Big Bold. Todos os direitos reservados.</div>
+
+  <!-- Popup Carrinho -->
+  <div id="popup-carrinho" class="popup">
+    <div class="modal-conteudo">
+      <p><strong>Carrinho:</strong> <span id="quantidade-itens">0</span> itens</p>
+    </div>
+  </div>
+
+</body>
+</html>

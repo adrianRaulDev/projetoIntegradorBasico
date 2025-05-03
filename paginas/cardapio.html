@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio - Big Bold</title>
+  <link rel="icon" type="image/png" href="../img/icon.png">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="../img/logo.png" alt="Logo Big Bold">
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="carrinho.html">Carrinho</a>
+      <!-- Aqui está o contador de itens no carrinho -->
+      <span id="contador-carrinho" class="contador">0</span>
+    </nav>
+  </header>
+
+  <section id="cardapio">
+    <h2>Cardápio Completo</h2>
+    <div class="menu">
+      <div class="item hamburgueres">
+        <img src="../img/iceSpice.png" alt="Big Sirius" class="imagem-cardapio">
+        <h3>Big Sirius</h3>
+        <p>R$ 24,90</p>
+        <button class="btn-carrinho" data-item="Big Sirius" data-preco="24.90">Adicionar ao Carrinho</button>
+      </div>
+      <div class="item hamburgueres">
+        <img src="../img/regularBurguer.png" alt="Duplo Sirius" class="imagem-cardapio">
+        <h3>Duplo Sirius</h3>
+        <p>R$ 28,90</p>
+        <button class="btn-carrinho" data-item="Duplo Sirius" data-preco="28.90">Adicionar ao Carrinho</button>
+      </div>
+      <div class="item combos">
+        <img src="../img/batata-frita.png" alt="Batata Nebulosa" class="imagem-cardapio">
+        <h3>Batata Nebulosa</h3>
+        <p>R$ 11,90</p>
+        <button class="btn-carrinho" data-item="Batata Nebulosa" data-preco="11.90">Adicionar ao Carrinho</button>
+      </div>
+      <div class="item sobremesas">
+        <img src="../img/sundae.png" alt="Sundae Galáxia" class="imagem-cardapio">
+        <h3>Galáxia Sundae</h3>
+        <p>R$ 9,90</p>
+        <button class="btn-carrinho" data-item="Galáxia Sundae" data-preco="9.90">Adicionar ao Carrinho</button>
+      </div>
+      <div class="item bebidas">
+        <img src="../img/refrigerante.png" alt="Refrigerante" class="imagem-cardapio">
+        <h3>Refrigerante 500ml</h3>
+        <p>R$ 6,90</p>
+        <button class="btn-carrinho" data-item="Refrigerante 500ml" data-preco="6.90">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <img src="../img/logo.png" alt="Logo Big Bold">
+      <p>Big Bold &copy; 2025</p>
+    </div>
+    <div>
+      <p class="titulo">Navegação</p>
+      <a href="index.html">Início</a><br>
+      <a href="cardapio.html">Cardápio</a>
+    </div>
+    <div>
+      <p class="titulo">Atendimento</p>
+      <p>Email: contato@bigbold.com</p>
+      <p>Telefone: (00) 12345-6789</p>
+    </div>
+  </footer>
+
+  <div id="copyright">© 2025 Big Bold. Todos os direitos reservados.</div>
+</body>
+</html>

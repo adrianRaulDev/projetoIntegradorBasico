@@ -1,0 +1,480 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fffaf3;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+}
+
+header nav a {
+  color: #ff7a00;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav a:hover {
+  color: #ffae42;
+  transform: scale(1.05);
+}
+
+/* INÍCIO */
+#inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ff7a00, #cc6100);
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+#inicio::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: url('img/wave.svg') no-repeat center;
+  background-size: cover;
+  filter: hue-rotate(-30deg);
+}
+
+#inicio h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #00000040;
+}
+
+#inicio .paragrafo {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.botao {
+  background-color: #ffa733;
+  color: #000;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.botao:hover {
+  background-color: #ffc56e;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* CARDÁPIO */
+#cardapio {
+  padding: 100px 20px;
+  text-align: center;
+  background: #fff;
+  min-height: 58.8vh;  /* Alterado para min-height */
+  overflow-y: auto;  /* Adicionado overflow para rolagem */
+}
+
+#cardapio h2 {
+  font-size: 2.8rem;
+  color: #ff7a00;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.filtros {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filtros button {
+  padding: 12px 24px;
+  border: none;
+  background-color: #ff7a00;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.filtros button:hover {
+  background-color: #ffa733;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.item {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #ff7a00;
+}
+
+.item p {
+  font-weight: bold;
+  color: #444;
+}
+
+.imagem-cardapio {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  object-fit: cover;
+  border: 2px solid #ffa733;
+}
+
+/* Estilos do botão de adicionar ao carrinho */
+.btn-pedido {
+  background-color: #ff7a00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-pedido:hover {
+  background-color: #ffa733;
+  transform: scale(1.05);
+}
+
+.btn-pedido:active {
+  transform: scale(1);
+}
+
+/* Botão de compra */
+.btn-carrinho {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff7a00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-carrinho:hover {
+  background-color: #ffa733;
+  transform: scale(1.05);
+}
+
+.btn-carrinho:active {
+  transform: scale(1);
+}
+
+/* Estilo para o carrinho */
+#carrinho {
+  padding: 20px;
+  text-align: center;
+  height: 58.8vh;  /* Alterado para altura ajustável */
+}
+
+#lista-carrinho {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.item-carrinho {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#resumo-carrinho {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+#botao-pagar {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#botao-pagar:hover {
+  background-color: #218838;
+}
+
+.btn-remover {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-remover:hover {
+  background-color: #ff1a1a;
+}
+
+/* DÚVIDAS */
+#duvidas {
+  background-color: #fdf7f0;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#duvidas h2 {
+  font-size: 2.4rem;
+  color: #ff7a00;
+  margin-bottom: 40px;
+}
+
+.duvida {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.duvida h3 {
+  background-color: #fff;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #ddd;
+  color: #ff7a00;
+  transition: background 0.2s;
+}
+
+.duvida:hover h3 {
+  background-color: #fff1e0;
+}
+
+.duvida .paragrafo {
+  padding: 0 20px;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+  background: #fff;
+}
+
+.duvida.ativa .paragrafo {
+  height: fit-content;
+  opacity: 1;
+  padding: 20px;
+}
+
+/* POPUP (modal do carrinho) */
+#popup-carrinho {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup-carrinho .modal-conteudo {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+#popup-carrinho h3 {
+  font-size: 2rem;
+  color: #ff7a00;
+  margin-bottom: 20px;
+}
+
+#popup-carrinho p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#popup-carrinho button {
+  padding: 10px 20px;
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#popup-carrinho button:hover {
+  background-color: #ffa733;
+}
+
+#popup-carrinho button:active {
+  transform: scale(1);
+}
+
+/* FOOTER */
+footer {
+  background-color: #ff7a00;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+footer img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #ffdca8;
+}
+
+.titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#copyright {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  height: 3rem;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .menu {
+    grid-template-columns: 1fr;  /* Coloca os itens do menu em uma coluna */
+  }
+
+  #carrinho {
+    height: 52vh;  /* Ajusta a altura do carrinho */
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

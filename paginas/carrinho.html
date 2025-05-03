@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - Big Bold</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="../img/logo.png" alt="Logo Big Bold">
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="carrinho.html">Carrinho</a>
+      <!-- Contador de itens no carrinho -->
+      <span id="contador-carrinho" class="contador">0</span>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="carrinho">
+      <h2>Seu Carrinho</h2>
+      <div id="lista-carrinho">
+        <!-- Os itens do carrinho serão adicionados aqui dinamicamente -->
+      </div>
+      <div id="resumo-carrinho">
+        <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
+        <p>Frete: R$ <span id="frete">5.00</span></p>
+        <p>Total: R$ <span id="total">5.00</span></p>
+      </div>
+      <button id="botao-pagar">Pagar</button>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <img src="../img/logo.png" alt="Logo Big Bold">
+      <p>Big Bold &copy; 2025</p>
+    </div>
+  </footer>
+
+  <div id="copyright">© 2025 Big Bold. Todos os direitos reservados.</div>
+</body>
+</html>
